@@ -1,0 +1,67 @@
+@import 'variables';
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &__title {
+        text-align: center;
+        color: $very-dark-blue;
+        font-size: 28px;
+    }
+    &__description {
+        text-align: center;
+        color: $grayish-blue;
+        padding: 0 20px;
+        line-height: 25px;
+    }
+    &__list {
+        list-style: none;
+        &--item {
+            cursor: pointer;
+            padding: 0 20px;
+            & div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid #E0E0E0;
+                padding: 10px 0;
+                & h3 {
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: $very-dark-blue;
+                }
+            }
+            & p {
+                font-size: 14px;
+                color: $grayish-blue;
+                line-height: 25px;
+                display: none;
+            }
+            &.active {
+                & div {
+                    & svg {
+                        transform: rotate(-180deg);
+                        & path {
+                            stroke: red;
+                        }
+                    }
+                }
+                & p {
+                    display: block;
+                }
+            }
+        }
+    }
+    &__button {
+        padding: 15px 20px;
+        border-radius: 5px;
+        font-weight: 500;
+        border: none;
+        background-color: $soft-blue;
+        color: white;
+        max-width: 50%;
+    }
+}
+
