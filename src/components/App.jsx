@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Hero from './Hero';
 import Feature from './Feature';
+import Extensions from './Extensions';
 
 const App = props => {
     return (
@@ -9,6 +10,7 @@ const App = props => {
             <Header />
             <Hero />
             <Feature features={props.features} />
+            <Extensions />
         </>
     )
 };
