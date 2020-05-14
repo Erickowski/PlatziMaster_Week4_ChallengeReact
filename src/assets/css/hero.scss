@@ -1,24 +1,26 @@
 @import 'variables';
 
 .hero {
-    margin-bottom: 20px;
+    margin-bottom: 100px;
     &__picture {
         display: flex;
+        position: relative;
+        margin-bottom: 75px;
         &--image {
-            position: relative;
             max-width: 100%;
+            z-index: 1;
         }
         &--background {
             padding: 0;
             margin: 0;
             position: absolute;
-            bottom: 10%;
-            left: -57%;
-            height: 350px;
-            width: 590px;
+            bottom: -10%;
+            right: 0;
+            height: 250px;
+            width: 550px;
             background-color: $soft-blue;
-            -webkit-clip-path: ellipse(40% 60% at 50% 50%);
-            clip-path: ellipse(50% 60% at 90% 0%);
+            -webkit-clip-path: ellipse(50% 60% at 90% 0%);
+            clip-path: ellipse(60% 50% at 100% 50%);
         }
     }
     &__title {
@@ -39,7 +41,7 @@
             padding: 15px 20px;
             border-radius: 5px;
             font-weight: 500;
-            border: none; 
+            border: none;
         }
         &--chrome {
             background-color: $soft-blue;
