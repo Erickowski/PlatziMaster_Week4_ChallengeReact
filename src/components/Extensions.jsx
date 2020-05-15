@@ -25,12 +25,12 @@ const Extensions = () => {
         <>
             <h2 className="extension__title">Downland the extension</h2>
             <p className="extension__description">We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.</p>
-            <div className="extension__cards">
+            <ul className="extension__cards">
                 {browsers.map((browser, index) => {
                     return(
                         <CardExtension key={'feature ' + index} browser={browser} />
                 )})}
-            </div>
+            </ul>
         </>
     );
 }
