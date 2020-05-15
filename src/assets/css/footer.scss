@@ -33,6 +33,7 @@
             &:last-child {
                 width: 50%;
                 display: flex;
+                justify-content: space-between;
                 & svg {
                     cursor: pointer;
                     & path {
