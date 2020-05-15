@@ -6,7 +6,6 @@ import '../assets/css/header.scss';
 // import logoBookmark from '../assets/static/logo-bookmark.svg';
 // import menuIcon from '../assets/static/icon-hamburger.svg';
 
-
 class Header extends Component {
     constructor(props) {
         super(props);
@@ -23,6 +22,20 @@ class Header extends Component {
                     <picture onClick={() => this.setState({nav: 'on'})} className="header__nav--menu">
                         <img src='src/assets/static/icon-hamburger.svg' alt=""/>
                     </picture>
+                    <ul className="header__nav--list">
+                        <li>
+                            <a href="#">Features</a>
+                        </li>
+                        <li>
+                            <a href="#">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#">Login</a>
+                        </li>
+                    </ul>
                 </nav>
             </header>
         ) :

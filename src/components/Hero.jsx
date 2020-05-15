@@ -6,7 +6,7 @@ const Hero = () => {
     return (
         <section className='hero'>
             <picture className="hero__picture">
-                {/* <div className="hero__picture--background"></div> */}
+                <div className="hero__picture--background"></div>
                 <img className="hero__picture--image" src="src/assets/static/illustration-hero.svg" alt=""/>
             </picture>
             <h1 className="hero__title">A Simple Bookmark Manager</h1>

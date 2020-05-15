@@ -54,11 +54,12 @@
             position: absolute;
             bottom: -30%;
             left: -5%;
+            right: 0;
             height: 250px;
-            width: 650px;
+            width: 100vw;
             background-color: $soft-blue;
             -webkit-clip-path: ellipse(50% 60% at 0% 50%);
-            clip-path: ellipse(50% 60% at 0% 50%);
+            clip-path: ellipse(80% 70% at 0% 50%);
         }
     }
 }

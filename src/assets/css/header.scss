@@ -7,6 +7,47 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        &--menu {
+            @media screen and (min-width: 1023px) {
+                display: none;
+            }
+        }
+        &--list {
+            display: none;
+            @media screen and (min-width: 1023px) {
+                display: inline-flex;
+                align-items: center;
+                list-style: none;
+                & li {
+                    padding: 0 20px;
+                    & a {
+                        font-size: 16px;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        color: $very-dark-blue;
+                    }
+                    &:hover a {
+                        color: $soft-red;
+                    }
+                    &:last-child {
+                        background-color: $soft-red;
+                        padding: 10px 20px;
+                        margin: 0 10px;
+                        border-radius: 10px;
+                        border: 1px solid $soft-red;
+                        & a {
+                            color: white;
+                        }
+                        &:hover {
+                            background-color: white;
+                            & a {
+                                color: $soft-red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 .menu {

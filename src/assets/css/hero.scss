@@ -17,10 +17,10 @@
             bottom: -10%;
             right: 0;
             height: 250px;
-            width: 550px;
+            width: 100vw;
             background-color: $soft-blue;
-            -webkit-clip-path: ellipse(50% 60% at 90% 0%);
-            clip-path: ellipse(60% 50% at 100% 50%);
+            -webkit-clip-path: ellipse(80% 60% at 100% 50%);
+            clip-path: ellipse(80% 60% at 100% 50%);
         }
     }
     &__title {
