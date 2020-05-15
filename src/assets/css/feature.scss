@@ -2,6 +2,22 @@
 
 .feature {
     margin-bottom: 100px;
+    @media screen and (min-width: 1023px) {
+        margin-bottom: 0;
+    }
+    &__button {
+        display: none;
+        @media screen and (min-width: 1023px) {
+            display: block;
+            padding: 15px 20px;
+            border-radius: 5px;
+            font-weight: 500;
+            border: none;
+            background-color: $soft-blue;
+            color: white;
+            margin-left: 150px;
+        }
+    }
     &__title,
     &__subtitle {
         font-size: 24px;
@@ -15,20 +31,45 @@
         padding: 0 25px;
         line-height: 25px;
     }
+    &__description {
+        @media screen and (min-width: 1023px) {
+            padding: 0 400px;
+        }
+    }
+    &__subtitle {
+        @media screen and (min-width: 1023px) {
+            text-align: left;
+            padding: 0 150px;
+        }
+    }
+    &__subdescription {
+        @media screen and (min-width: 1023px) {
+            padding: 0 150px;
+            text-align: left;
+        }
+    }
     &__list {
         list-style: none;
         padding: 0 30px;
         margin-bottom: 75px;
+        @media screen and (min-width: 1023px) {
+            display: flex;
+            justify-content: space-evenly;
+        }
         &--item {
             border-top: 1px solid $grayish-blue;
             text-align: center;
-            cursor: pointer;
+            @media screen and (min-width: 1023px) {
+                border: none;
+                border-bottom: 1px solid $grayish-blue;
+            }
             & button {
                 padding: 15px 0;
                 font-size: 18px;
                 color: $grayish-blue;
                 background-color: white;
                 border: none;
+                cursor: pointer;
             }
             &.active > button {
                 color: black;
@@ -37,22 +78,33 @@
             &:last-child {
                 border-bottom: 1px solid $grayish-blue;
             }
+            &:hover button {
+                color: $soft-red;
+            }
         }
     }
     &__picture {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         position: relative;
         margin-bottom: 100px;
+        @media screen and (min-width: 1023px) {
+            flex-direction: row;
+        }
         &--image {
             max-width: 90%;
             z-index: 1;
+            margin-bottom: 100px;
+            @media screen and (min-width: 1023px) {
+                width: 100%;
+            }
         }
         &--background {
             padding: 0;
             margin: 0;
             position: absolute;
-            bottom: -30%;
+            bottom: 30%;
             left: -5%;
             right: 0;
             height: 250px;
@@ -60,6 +112,10 @@
             background-color: $soft-blue;
             -webkit-clip-path: ellipse(50% 60% at 0% 50%);
             clip-path: ellipse(80% 70% at 0% 50%);
+            @media screen and (min-width: 1023px) {
+                bottom: 0;
+                width: 50%;
+            }
         }
     }
 }
