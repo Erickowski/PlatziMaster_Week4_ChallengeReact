@@ -70,6 +70,7 @@
                 background-color: white;
                 border: none;
                 cursor: pointer;
+                transition: all ease-in .5s;
             }
             &.active > button {
                 color: black;

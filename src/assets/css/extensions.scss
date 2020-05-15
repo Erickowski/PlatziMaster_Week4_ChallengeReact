@@ -35,9 +35,9 @@
         flex-direction: column;
         align-items: center;
         @media screen and (min-width: 1023px) {
-            // display: inline;
             margin: 0 auto;
             max-height: 50vh;
+            width: 100%;
             &:nth-child(1) {
                 grid-row-start: 1;
                 grid-row-end: 8;
@@ -80,6 +80,13 @@
             border: none;
             background-color: $soft-blue;
             color: white;
+            border: 1px solid $soft-blue;
+            transition: all ease-in .5s;
+            cursor: pointer;
+            &:hover {
+                background-color: white;
+                color: $soft-blue;
+            }
         }
     }
 }

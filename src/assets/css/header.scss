@@ -28,6 +28,7 @@
                         text-decoration: none;
                         text-transform: uppercase;
                         color: $very-dark-blue;
+                        transition: all ease-in .5s;
                     }
                     &:hover a {
                         color: $soft-red;
@@ -40,6 +41,7 @@
                         border: 1px solid $soft-red;
                         & a {
                             color: white;
+                            transition: all ease-in .5s;
                         }
                         &:hover {
                             background-color: white;
