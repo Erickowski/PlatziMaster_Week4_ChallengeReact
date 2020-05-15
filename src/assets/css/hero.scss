@@ -3,23 +3,17 @@
 .hero {
     margin-bottom: 100px;
     @media screen and (min-width: 1023px) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        margin-bottom: 0;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row-reverse;
     }
     &__picture {
         display: flex;
         position: relative;
         margin-bottom: 75px;
-        @media screen and (min-width: 1023px) {
-            margin-bottom: 0;
-            grid-column-start: 2;
-            grid-column-end: 3;
-            grid-row-start: 1;
-            grid-row-end: 4;
-        }
         &--image {
-            max-width: 100%;
+            width: 100%;
             z-index: 1;
         }
         &--background {
@@ -34,51 +28,70 @@
             -webkit-clip-path: ellipse(80% 60% at 100% 50%);
             clip-path: ellipse(80% 60% at 100% 50%);
             @media screen and (min-width: 1023px) {
-                width: 50vw;
+                width: 30vw;
             }
         }
     }
-    &__title {
-        font-size: 28px;
+    &__content {
         text-align: center;
-        color: $very-dark-blue;
         @media screen and (min-width: 1023px) {
-            grid-row-start: 1;
-            grid-row-end: 2;
-            font-size: 72px;
             text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 0 50px;
         }
-    }
-    &__description {
-        text-align: center;
-        color: $grayish-blue;
-        padding: 0 25px;
-        line-height: 25px;
-        @media screen and (min-width: 1023px) {
-            grid-row-start: 2;
-            grid-row-end: 3;
+        &--title {
+            margin: 0;
+            font-size: 28px;
+            color: $very-dark-blue;
+            @media screen and (min-width: 1023px) {
+                font-size: 60px;
+            }
         }
-    }
-    &__buttons {
-        display: flex;
-        justify-content: space-around;
-        @media screen and (min-width: 1023px) {
-            grid-row-start: 3;
-            grid-row-end: 4;
+        &--description {
+            color: $grayish-blue;
+            padding: 0 25px;
+            line-height: 25px;
+            @media screen and (min-width: 1023px) {
+                line-height: 30px;
+                padding: 0 20px 0 0;
+            }
         }
-        & > button {
-            padding: 15px 20px;
-            border-radius: 5px;
-            font-weight: 500;
-            border: none;
-        }
-        &--chrome {
-            background-color: $soft-blue;
-            color: white;
-        }
-        &--firefox {
-            background-color: #F3F3F3;
-            color: black;
+        &--buttons {
+            display: flex;
+            justify-content: space-around;
+            @media screen and (min-width: 1023px) {
+                justify-content: flex-start;
+            }
+            & > button {
+                padding: 15px 20px;
+                border-radius: 5px;
+                font-weight: 500;
+                border: none;
+                cursor: pointer;
+                @media screen and (min-width: 1023px) {
+                    margin: 0 10px;
+                }
+            }
+            & .chrome {
+                background-color: $soft-blue;
+                color: white;
+                border: 1px solid $soft-blue;
+                &:hover {
+                    background-color: white;
+                    color: $soft-blue;
+                }
+            }
+            & .firefox {
+                background-color: #F3F3F3;
+                color: black;
+                border: 1px solid #F3F3F3;
+                &:hover {
+                    background-color: white;
+                    border-color: black;
+                }
+            }
         }
     }
 }
