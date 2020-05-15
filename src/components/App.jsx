@@ -4,6 +4,7 @@ import Hero from './Hero';
 import Feature from './Feature';
 import Extensions from './Extensions';
 import Faq from './Faq';
+import Contact from './Contact';
 
 const App = props => {
     return (
@@ -13,6 +14,7 @@ const App = props => {
             <Feature features={props.features} />
             <Extensions />
             <Faq buttons={props.buttons} />
+            <Contact/>
         </>
     )
 };

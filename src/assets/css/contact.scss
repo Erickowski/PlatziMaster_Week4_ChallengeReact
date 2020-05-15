@@ -1,0 +1,66 @@
+@import 'variables';
+
+.contact {
+    background-color: $soft-blue;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__subtitle {
+        color: white;
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+    &__title {
+        margin-top: 0;
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        font-weight: 400;
+    }
+    &__input {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        & input {
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+        }
+        & .error {
+            border: 3px solid $soft-red;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        &--error {
+            display: none;
+            width: 100%;
+            background-color: $soft-red;
+            color: white;
+            margin: 0;
+            border-radius: 5px;
+            padding: 5px 15px;
+            font-size: 12px;
+            margin-bottom: 20px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border: 3px solid $soft-red;
+            &.error {
+                display: block;
+            }
+        }
+    }
+    &__button {
+        width: 80%;
+        padding: 15px;
+        border-radius: 10px;
+        border: none;
+        width: 90%;
+        background-color: $soft-red;
+        color: white;
+    }
+}
