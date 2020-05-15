@@ -78,6 +78,7 @@
                 background-color: $soft-blue;
                 color: white;
                 border: 1px solid $soft-blue;
+                transition: all ease .5s;
                 &:hover {
                     background-color: white;
                     color: $soft-blue;
@@ -87,6 +88,7 @@
                 background-color: #F3F3F3;
                 color: black;
                 border: 1px solid #F3F3F3;
+                transition: all ease .5s;
                 &:hover {
                     background-color: white;
                     border-color: black;

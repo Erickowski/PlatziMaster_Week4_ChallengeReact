@@ -6,12 +6,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media screen and (min-width: 1023px) {
+        line-height: 40px;
+    }
     &__subtitle {
         color: white;
         font-weight: 400;
         font-size: 12px;
         letter-spacing: 5px;
         text-transform: uppercase;
+        @media screen and (min-width: 1023px) {
+            font-size: 18px;
+        }
     }
     &__title {
         margin-top: 0;
@@ -19,22 +25,49 @@
         font-size: 24px;
         text-align: center;
         font-weight: 400;
-    }
-    &__input {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
-        & input {
-            width: 100%;
-            padding: 15px;
-            border-radius: 10px;
-            border: none;
+        @media screen and (min-width: 1023px) {
+            font-size: 32px;
+            padding: 0 400px;
         }
-        & .error {
-            border: 3px solid $soft-red;
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
+    }
+    &__email {
+        position: relative;
+        @media screen and (min-width: 1023px) {
+            width: 30%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        &--input {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            & input {
+                width: 100%;
+                padding: 15px;
+                border-radius: 10px;
+                border: none;
+            }
+            & .error {
+                border: 3px solid $soft-red;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            & img {
+                position: absolute;
+                right: 0;
+                bottom: 80%;
+                display: none;
+                @media screen and (min-width: 1023px) {
+                    right: 45%;
+                    bottom: 75%;
+                }
+                &.error {
+                    display: block;
+                    border: none;
+                }
+            }
         }
         &--error {
             display: none;
@@ -53,14 +86,22 @@
                 display: block;
             }
         }
-    }
-    &__button {
-        width: 80%;
-        padding: 15px;
-        border-radius: 10px;
-        border: none;
-        width: 90%;
-        background-color: $soft-red;
-        color: white;
+        &--button {
+            padding: 13px;
+            border-radius: 10px;
+            border: 2px solid $soft-red;
+            width: 90%;
+            background-color: $soft-red;
+            color: white;
+            transition: all ease .2s;
+            cursor: pointer;
+            @media screen and (min-width: 1023px) {
+                width: 30%;
+            }
+            &:hover {
+                background-color: white;
+                color: $soft-red;
+            }
+        }
     }
 }
