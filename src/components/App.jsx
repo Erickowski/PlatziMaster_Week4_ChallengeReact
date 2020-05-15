@@ -5,6 +5,7 @@ import Feature from './Feature';
 import Extensions from './Extensions';
 import Faq from './Faq';
 import Contact from './Contact';
+import Footer from './Footer';
 
 const App = props => {
     return (
@@ -15,6 +16,7 @@ const App = props => {
             <Extensions />
             <Faq buttons={props.buttons} />
             <Contact/>
+            <Footer />
         </>
     )
 };
